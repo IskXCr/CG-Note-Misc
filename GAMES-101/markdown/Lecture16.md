@@ -19,7 +19,7 @@ and we list it here as a reference.
 
 
 
-## Monte Carlo Integration
+### Monte Carlo Integration
 
 - **Why**: When we want to solve an integral, but it can be too difficult to solve *analytically*.
 - **What & How**: Estimate the integral of a function by averaging random samples of the function's value.
