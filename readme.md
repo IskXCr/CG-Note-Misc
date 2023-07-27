@@ -24,10 +24,10 @@ This repository contains notes of various courses, textbooks and papers in compu
 
 The current list is as follows. 
 
-| Course Code | Course Name                                          | Instructor             | Affiliation  |
-| ----------- | ---------------------------------------------------- | ---------------------- | ------------ |
-| GAMES-101   | Introduction to Computer Graphics                    | Prof. Lingqi Yan       | UCSB         |
-| GAMES-202   | Real-Time High Quality Rendering                     | Prof. Lingqi Yan       | UCSB         |
+| Course Code | Course Name                       | Instructor       | Affiliation | Link                     |
+| ----------- | --------------------------------- | ---------------- | ----------- | ------------------------ |
+| GAMES-101   | Introduction to Computer Graphics | Prof. Lingqi Yan | UCSB        | [GAMES-101](./GAMES-101) |
+| GAMES-202   | Real-Time High Quality Rendering  | Prof. Lingqi Yan | UCSB        | [GAMES-202](./GAMES-202) |
 
 ## Course Repositories
 

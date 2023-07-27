@@ -24,57 +24,53 @@ It is VIOLATING THE POLICY specified in GAMES101 to directly copy these referent
 
 So far GitHub markdown preview cannot provide satisfying experience on physical formulae. We compiled these notes into HTML format for easy access.
 
-Online reading experience currently relies on the HTML preview service provided by GitHub. Below are some temporary links that you may use to access notes.
+Online reading experience currently relies on the GitHub Pages service. Below you will find the links to them.
 
-Only when the entire note has been completed will the readable-html be available.
+### Online Notes (Based on GitHub Pages)
 
-Select a html file from here and preview it in [HTML Preview](https://htmlpreview.github.io).
+[Lecture01 - Introduction to Computer Graphics](./readable-html/Lecture01.html)
 
-### Online Notes (Based on HTML Preview)
+[Lecture02 - Basic Linear Algebra](./readable-html/Lecture02.html)
 
-[Lecture01 - Introduction to Computer Graphics](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture01.html)
+[Lecture03 - Transformation](./readable-html/Lecture03.html)
 
-[Lecture02 - Basic Linear Algebra](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture02.html)
+[Lecture04 - Transformation Cont.](./readable-html/Lecture04.html)
 
-[Lecture03 - Transformation](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture03.html)
+[Lecture05 - Rasterization 1](./readable-html/Lecture05.html)
 
-[Lecture04 - Transformation Cont.](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture04.html)
+[Lecture06 - Rasterization 2](./readable-html/Lecture06.html)
 
-[Lecture05 - Rasterization 1](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture05.html)
+[Lecture07 - Shading 1](./readable-html/Lecture07.html)
 
-[Lecture06 - Rasterization 2](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture06.html)
+[Lecture08 - Shading 2](./readable-html/Lecture08.html)
 
-[Lecture07 - Shading 1](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture07.html)
+[Lecture09 - Shading 3](./readable-html/Lecture09.html)
 
-[Lecture08 - Shading 2](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture08.html)
+[Lecture10 - Geometry 1](./readable-html/Lecture10.html)
 
-[Lecture09 - Shading 3](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture09.html)
+[Lecture11 - Geometry 2](./readable-html/Lecture11.html)
 
-[Lecture10 - Geometry 1](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture10.html)
+[Lecture12 - Geometry 3](./readable-html/Lecture12.html)
 
-[Lecture11 - Geometry 2](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture11.html)
+[Lecture13 - Ray Tracing 1](./readable-html/Lecture13.html)
 
-[Lecture12 - Geometry 3](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture12.html)
+[Lecture14 - Ray Tracing 2](./readable-html/Lecture14.html)
 
-[Lecture13 - Ray Tracing 1](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture13.html)
+[Lecture15 - Ray Tracing 3](./readable-html/Lecture15.html)
 
-[Lecture14 - Ray Tracing 2](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture14.html)
+[Lecture16 - Ray Tracing 4](./readable-html/Lecture16.html)
 
-[Lecture15 - Ray Tracing 3](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture15.html)
+[Lecture17 - Materials and Appearances](./readable-html/Lecture17.html)
 
-[Lecture16 - Ray Tracing 4](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture16.html)
+[Lecture18 - Advanced Topics in Rendering](./readable-html/Lecture18.html)
 
-[Lecture17 - Materials and Appearances](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture17.html)
+[Lecture19 - Cameras, Lenses and Light Fields](./readable-html/Lecture19.html)
 
-[Lecture18 - Advanced Topics in Rendering](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture18.html)
+[Lecture20 - Color and Perception](./readable-html/Lecture20.html)
 
-[Lecture19 - Cameras, Lenses and Light Fields](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture19.html)
+[Lecture21 - Animation](./readable-html/Lecture21.html)
 
-[Lecture20 - Color and Perception](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture20.html)
-
-[Lecture21 - Animation](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture21.html)
-
-[Lecture22 - Animation Cont.](https://htmlpreview.github.io/?https://github.com/IskXCr/CG-Note-Misc/blob/main/GAMES-101/readable-html/Lecture22.html)
+[Lecture22 - Animation Cont.](./readable-html/Lecture22.html)
 
 
 ### How do I read notes using local tools?
