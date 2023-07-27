@@ -2,7 +2,7 @@
 
 [GAMES101_Lecture_17.pdf](https://sites.cs.ucsb.edu/~lingqi/teaching/resources/GAMES101_Lecture_17.pdf)
 
-## I. Materials and Apperances
+## I. Materials and Appearances
 
 ![img-27](../images/Lecture17-img-27.png)
 
@@ -95,12 +95,11 @@ in which $\rho$ is called **albedo**, or color.
 
 ### Perfect Specular Reflection
 
-![img-9](../images/Lecture17-img-9.png)
+<img src="../images/Lecture17-img-9.png" alt="img-9" style="zoom:50%;" />
 
 <p align="center">From PBRT</p>
 
-![img-8](../images/Lecture17-img-8.png)
-
+<img src="../images/Lecture17-img-8.png" alt="img-8" style="zoom: 33%;" />
 $$
 \omega_o + \omega_i = 2 \cos{\theta} ~ \vec{n} = 2(\omega_i \cdot \vec{n}) \vec{n}
 $$
@@ -130,8 +129,7 @@ Transmitted angle depends on
 - **index of refraction (IOR)** for incident ray
 - IOR for exiting ray
 
-![img-10](../images/Lecture17-img-10.png)
-
+<img src="../images/Lecture17-img-10.png" alt="img-10" style="zoom:33%;" />
 $$
 \eta_i \sin{\theta_i} = \eta_t \sin{\theta_t}
 $$
@@ -372,7 +370,7 @@ $$
 
   The nature of integration make BRDFs addable.
   
-  ![img-24](../images/Lecture17-img-24.png)
+  <img src="../images/Lecture17-img-24.png" alt="img-24" style="zoom:50%;" />
   
 - **Reciprocity Principle**
   
@@ -380,7 +378,7 @@ $$
   f_r (\omega_r, \omega_i) = f_r (\omega_i, \omega_r)
   $$
 
-  ![img-25](../images/Lecture17-img-25.png)
+  <img src="../images/Lecture17-img-25.png" alt="img-25" style="zoom:50%;" />
 
 - **Energy Conservation**
   
@@ -400,7 +398,7 @@ $$
     f_r (\theta_i, \theta_r, \phi_r - \phi_i) = f_r (\theta_r, \theta_i, \phi_i - \phi_r) = f_r (\theta_i, \theta_r, \abs{\phi_r - \phi_i})
     $$
 
-  ![img-26](../images/Lecture17-img-26.png)
+  <img src="../images/Lecture17-img-26.png" alt="img-26" style="zoom:50%;" />
 
 
 
@@ -417,7 +415,7 @@ Target:
 
 #### General Approach
 
-![img-31](../images/Lecture17-img-31.png)
+<img src="../images/Lecture17-img-31.png" alt="img-31" style="zoom: 33%;" />
 
 - For each outgoing direction $\omega_o$
   - move light to illuminate surface with a thin beam from $\omega_o$

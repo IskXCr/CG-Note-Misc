@@ -66,10 +66,10 @@ $$
 
 In summary, Whitted-style ray tracing:
 
-- Always perform **specular** reflections/refractions
+- Always perform **specular** reflections/refractions:
   - *Where should the ray be reflected for glossy materials?*
     - Incorrect implementation for **glossy** reflections, since the reflections in this case doesn't strictly follow the directions for specular reflections.
-- Stop bouncing at **diffuse** surfaces
+- Stop bouncing at **diffuse** surfaces:
   - *No reflections between diffuse materials*.
     - **Color-bleeding** from global illumination.
 

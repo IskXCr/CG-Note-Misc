@@ -8,13 +8,13 @@
 
 - Parameterization
 
-  ![img-1](../images/Lecture09-img-1.png)
+  <img src="../images/Lecture09-img-1.png" alt="img-1" style="zoom:50%;" />
 
-  ![img-2](../images/Lecture09-img-2.png)
+  <img src="../images/Lecture09-img-2.png" alt="img-2" style="zoom:50%;" />
 
 - **Tile-able Texture**
 
-  ![img-3](../images/Lecture09-img-3.png)
+  <img src="../images/Lecture09-img-3.png" alt="img-3" style="zoom:50%;" />
 
 
 
@@ -137,7 +137,7 @@ For each rasterized screen sample, determine its $(u, v)$ coordinate by (possibl
 
   - *Ripmaps and summed area tables*: 
 
-    <img src="../images/Lecture09-img-10.png" alt="img-10" style="zoom:50%;" />
+    <img src="../images/Lecture09-img-10.png" alt="img-10" style="zoom: 67%;" />
 
     Can look up **axis-aligned rectangular zones**.
 
@@ -199,7 +199,7 @@ Applications:
 
         in **local coordinate**.
 
-  - *Displacement Mapping*: **Move the vertices instead**.
+  - *Displacement Mapping*: Move the **vertices** instead.
 
   - *Ambient Occlusion Texture Map*: Record the status of ambient occlusions on the object.
 
@@ -222,11 +222,11 @@ Applications:
 
 *From* `Lecture 12.md`.
 
-- An **image-space** algorithm.
+- An **image-space** algorithm:
   - **No** knowledge of scene's geometry during shadow computation
   - Must deal with aliasing artifacts.
 
-- **Key idea**: the points NOT in shadow must be **seen** 
+- **Key idea**: the points NOT in shadow must be seen:
 
   - both **by the light**, and
 
@@ -290,7 +290,7 @@ Reference: [Normal-Mapping]([LearnOpenGL - Normal Mapping](https://learnopengl.c
 
 ### Tangent Space
 
-Normal vectors in a normal map are expressed in tangent space where normals always point roughly in the positive $z$ direction. Tangent space is a space that's local to the surface of a triangle: the normals are relative to the local reference frame of the individual triangles. Think of it as the local space of the normal map's vectors; they're all defined pointing in the positive z direction regardless of the final transformed direction. Using a specific matrix we can then transform normal vectors from this *local* tangent space to world or view coordinates, orienting them along the final mapped surface's direction.
+Normal vectors in a normal map are expressed in tangent space where normals always point roughly in the positive $z$ direction. Tangent space is a space that's local to the surface of a triangle: the normals are relative to the local reference frame of the individual triangles. Think of it as the local space of the normal map's vectors; they're all defined pointing in the positive z direction regardless of the final transformed direction. Using a specific matrix we can then transform normal vectors from this *local* tangent space to *world* or view coordinates, orienting them along the final mapped surface's direction.
 
 **The TBN Matrix** is computed to transform normals from the tangent space to a different space such that they're aligned with the surface's normal direction.
 
@@ -298,8 +298,8 @@ Normal vectors in a normal map are expressed in tangent space where normals alwa
 
   ![img-12](../images/Lecture09-img-12.png)
 
-  - *The tangent vector and the bitangent vector align with the direction in which we define a surface's texture coordinates.*
-  - *Multiply the acquired normal vector from the normal map, by the TBN matrix, transforms the vector into the global coordinates.*
+  - The tangent vector and the bitangent vector align with the direction in which we define a surface's texture coordinates.
+  - Multiplying the acquired normal vector from the normal map, by the TBN matrix, transforms the vector into the global coordinates.
 
 
 

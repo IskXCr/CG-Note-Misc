@@ -177,7 +177,7 @@ Intersect(Ray ray, BVH node) {
   - Irradiance
   - Radiance
 - Perform lighting calculations **in a physically correct manner**.
-- *Still based on **Geometric Optics***.
+- *Still based on Geometric Optics*.
 
 
 
@@ -189,8 +189,7 @@ $$
 Q \quad[\text{J $=$ Joule}]
 $$
 
-***Definition***: **Radiant flux** (power) is the energy emitted, reflected, transmitted or received, *per unit time*.
-
+***Definition***: **Radiant flux** (power) is the energy emitted, reflected, transmitted or received, **per unit time.**
 $$
 \Phi \equiv \dv{Q}{t} \quad \text{[W = Watt] [lm = lumen]}
 $$
@@ -201,8 +200,7 @@ $$
 
 <img src="../images/Lecture14-img-4.png" alt="img-4" style="zoom:50%;" />
 
-***Definition***: The **radiant (luminous) intensity** is the power *per unit solid angle* emitted by a point light source.
-
+***Definition***: The **radiant (luminous) intensity** is the power **per unit solid angle** emitted by a point light source.
 $$
 I(\omega) \equiv \dv{\Phi}{\omega}
 \quad
@@ -219,16 +217,14 @@ where *candela* is one of the seven SI base units.
 
 ### Angles, Solid Angles and Direction Vectors
 
-***Definition***: **Angle** is the *ratio* of subtended arc length on a circle to the radius
-
+***Definition***: **Angle** is the ratio of subtended arc length on a circle to the radius
 $$
 \theta = \frac{l}{r}
 $$
 
 A circle has $2\pi$ **radians**.
 
-***Definition***: **Solid angle** is the ratio of subtended *area* on a sphere to the radius *squared*
-
+***Definition***: **Solid angle** is the ratio of subtended area on a sphere to the radius *squared*
 $$
 \Omega = \frac{A}{r^2}
 $$

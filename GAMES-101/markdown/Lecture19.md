@@ -89,7 +89,7 @@ $$
 - **ISO gain**
   - Change the amplification (analog and/or digital) between sensor values and digital image values
 
-![img-5](../images/Lecture19-img-5.png)
+<img src="../images/Lecture19-img-5.png" alt="img-5" style="zoom:50%;" />
 
 - From top to bottom: aperture size, shutter speed, ISO gain
 
@@ -126,7 +126,7 @@ which is the **focal length** $f$ divided by the **diameter of the aperture**.
 
 - An f-stop of $2$ is sometimes written $f/2$, reflecting the fact that the absolute aperture diameter $A$ can be computed by dividing the focal length $f$ by the relative aperture $N$.
 
-![img-18](../images/Lecture19-img-18.png)
+<img src="../images/Lecture19-img-18.png" alt="img-18" style="zoom:50%;" />
 
 
 
@@ -200,7 +200,7 @@ Real lens designs are highly complex.
 
 ##### The Thin Lens Equation
 
-![img-14](../images/Lecture19-img-14.png)
+<img src="../images/Lecture19-img-14.png" alt="img-14" style="zoom:50%;" />
 
 **Gaussian Thin Lens Equation**:
 
@@ -214,7 +214,7 @@ $$
 
 *For ideal lens only.*
 
-![img-15](../images/Lecture19-img-15.png)
+<img src="../images/Lecture19-img-15.png" alt="img-15" style="zoom:50%;" />
 
 
 
@@ -229,7 +229,7 @@ $$
   $$
   
 
-![img-16](../images/Lecture19-img-16.png)
+<img src="../images/Lecture19-img-16.png" alt="img-16" style="zoom:50%;" />
 
 <img src="../images/Lecture19-img-17.png" alt="img-17" style="zoom: 50%;" />
 
@@ -251,7 +251,7 @@ View the **Exposure** section.
 
 
 
-![img-19](../images/Lecture19-img-19.png)
+<img src="../images/Lecture19-img-19.png" alt="img-19" style="zoom:50%;" />
 
 ##### Rendering
 
@@ -271,11 +271,11 @@ Set the CoC as the maximum permissible blur spot on the image plane
 
 - Such that they will appear as a single pixel finally
 
-![img-21](../images/Lecture19-img-21.png)
+<img src="../images/Lecture19-img-21.png" alt="img-21" style="zoom: 50%;" />
 
 **Depth of Field**: Depth range in a scene where the corresponding CoC is considered **small enough**
 
-![img-22](../images/Lecture19-img-22.png)
+<img src="../images/Lecture19-img-22.png" alt="img-22" style="zoom:50%;" />
 
 <p align="center"><a>http://graphics.stanford.edu/courses/cs178/applets/dof.html</a></p>
 
@@ -392,7 +392,7 @@ Flies record lumigraph of the scene, or **radiance**.
 
 #### Getting a Photo from the Light Field Camera
 
-<img src="../images/Lecture19-img-32.png" alt="Lecture19-img-32" style="zoom:33%;" />
+<img src="../images/Lecture19-img-32.png" alt="Lecture19-img-32" style="zoom: 50%;" />
 
 - **Moving the camera around**: Always choose the pixel at a fixed position in each disk
 - **Computational/Digital Refocusing**: Changing focal length, and pick the refocused rays accordingly

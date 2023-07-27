@@ -223,11 +223,11 @@ Industry often uses path-tracing.
 
 - At any point as ligh travels through a participating medium, it can be (partially) **absorbed** and **scattered**
 
-  ![img-nsm-pm-def-1](../images/Lecture18-img-nsm-pm-def-1.png)
+  <img src="../images/Lecture18-img-nsm-pm-def-1.png" alt="img-nsm-pm-def-1" style="zoom:50%;" />
 
 - Use **Phase Function** to describe the angular distribution of light scattering at any point $x$ within participating media
 
-  ![img-nsm-pm-def-2](../images/Lecture18-img-nsm-pm-def-2.png)
+  <img src="../images/Lecture18-img-nsm-pm-def-2.png" alt="img-nsm-pm-def-2" style="zoom:50%;" />
 
 
 
@@ -254,7 +254,7 @@ Industry often uses path-tracing.
 
 ##### Kajiya-Kay Model
 
-<img src="../images/Lecture18-img-nsm-hff-hair-kkm-1.png" alt="img-nsm-hff-hair-kkm-1" style="zoom:50%;" />
+<img src="../images/Lecture18-img-nsm-hff-hair-kkm-1.png" alt="img-nsm-hff-hair-kkm-1" style="zoom: 33%;" />
 
 - Model the hair as a cylinder
 - When light hits the cylinder, it is diffused
@@ -278,13 +278,13 @@ Industry often uses path-tracing.
 
   <img src="../images/Lecture18-img-nsm-hff-hair-mm-3.png" alt="img-nsm-hff-hair-mm-3" style="zoom:50%;" />
 
-![image-20230715054053623](../images/Lecture18-img-nsm-hff-hair-mm-4.png)
+<img src="../images/Lecture18-img-nsm-hff-hair-mm-4.png" alt="image-20230715054053623" style="zoom: 33%;" />
 
 
 
 ##### Fur Appearance
 
-![nsm-hff-fur-comp-1](../images/Lecture18-img-nsm-hff-fur-comp-1.png)
+<img src="../images/Lecture18-img-nsm-hff-fur-comp-1.png" alt="nsm-hff-fur-comp-1" style="zoom: 50%;" />
 
 - Cannot realize the diffusive and saturated appearance if represented as human hair
 
@@ -338,8 +338,8 @@ Industry often uses path-tracing.
 
 | Material  | Example                                                      |
 | --------- | ------------------------------------------------------------ |
-| Jade      | <img src="../images/Lecture18-img-sm-tm-example-1.png" alt="img-sm-tm-example-1" style="zoom:50%;" /> |
-| Jellyfish | ![img-sm-tm-example-2](../images/Lecture18-img-sm-tm-example-2.png) |
+| Jade      | <img src="../images/Lecture18-img-sm-tm-example-1.png" alt="img-sm-tm-example-1" style="zoom: 33%;" /> |
+| Jellyfish | <img src="../images/Lecture18-img-sm-tm-example-2.png" alt="img-sm-tm-example-2" style="zoom: 36%;" /> |
 
 ***Translucent***: Both scattering and absorption
 
@@ -375,7 +375,7 @@ $$
   \dd{A}
   $$
 
-![img-sm-sss-1](../images/Lecture18-img-sm-sss-1.png)
+<img src="../images/Lecture18-img-sm-sss-1.png" alt="img-sm-sss-1" style="zoom: 67%;" />
 
 
 
@@ -383,7 +383,7 @@ $$
 
 - Apprximate light diffusion by introducting two point sources
 
-![img-sm-sss-2](../images/Lecture18-img-sm-sss-2.png)
+<img src="../images/Lecture18-img-sm-sss-2.png" alt="img-sm-sss-2" style="zoom:50%;" />
 
 
 
