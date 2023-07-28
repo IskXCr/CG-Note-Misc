@@ -15,5 +15,5 @@
 Designed to solve the problem in *translation*.
 
 - Represent **any linear operation** into a linear transformation, which can be then represented by matrices.
-  - *Curvilinear-related operations still cannot be done directly! Such as simulating rays passing through a lens. However, there are other ways, of course.*
+  - Curvilinear-related operations still cannot be done directly! Such as simulating rays passing through a lens. However, there are other ways, of course.
 

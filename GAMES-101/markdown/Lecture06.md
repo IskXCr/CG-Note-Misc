@@ -7,7 +7,7 @@
 Signals are *changing too fast* (high frequency) but *sampled too slowly*.
 
 - **Nyquist-Shannon Sampling Theorem**: If a function $x(t)$ contains no frequencies higher than $B$ hertz, then it can be completely determined from its ordinates at a sequence of points spaced less than $\frac{1}{2B}$ seconds apart.
-  - ***Higher frequencies need faster sampling***.
+  - **Higher frequencies need faster sampling**.
 
 - **Aliases**: Two frequencies that are indistinguishable at a given sampling rate are called "aliases".
 
