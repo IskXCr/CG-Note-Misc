@@ -29,7 +29,7 @@ Three assumptions:
 
 ### Ray Casting
 
-![img-1](../images/Lecture13-img-1.png)
+<img src="../images/Lecture13-img-1.png" alt="img-1" style="zoom:50%;" />
 
 - **Pinhole Camera Model**
 - **Point Light Source**
@@ -51,7 +51,7 @@ Simulates the recursive bouncing of light rays.
 
 - Different rays:
 
-  ![img-2](../images/Lecture13-img-2.png)
+  <img src="../images/Lecture13-img-2.png" alt="img-2" style="zoom:50%;" />
 
   - *Primary Ray*: Starts at the eye
   - *Secondary Ray*: Generated upon collision of primary ray

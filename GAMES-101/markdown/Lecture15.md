@@ -88,7 +88,7 @@ where $p$ is the point being considered, and $\Omega_{+}$ denotes the upper hemi
 
 #### Rendering Equation as Integral Equation
 
-Equation $\ref{ref1}$ is a **Fredhold Integral Equation** of second kind (extensively studied numerically) with **canonical form**:
+Equation $\ref{rendeq}$ is a **Fredhold Integral Equation** of second kind (extensively studied numerically) with **canonical form**:
 
 $$
 \begin{equation} \label{fredhold} \tag{3}

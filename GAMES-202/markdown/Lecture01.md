@@ -1,6 +1,6 @@
 # GAMES202 Lecture 01 - Introduction and Overview
 
-[GAMES202-Lecture-01.pdf](https://sites.cs.ucsb.edu/~lingqi/teaching/resources/GAMES202_Lecture_01.pdf)
+[GAMES202 Lecture 01 (ucsb.edu)](https://sites.cs.ucsb.edu/~lingqi/teaching/resources/GAMES202_Lecture_01.pdf)
 
 ## I. Overview
 
@@ -53,6 +53,8 @@ Overall, not about a specific engine or API, and not about offline rendering.
 - Expensive light transport techniques
 - Neural Rendering (*Why?*)
 - Specific optimization and high performance computing
+
+But when finishing assignments, basic knowledge of OpenGL is required.
 
 
 

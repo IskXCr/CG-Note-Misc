@@ -8,13 +8,13 @@
 
 - Parameterization
 
-  <img src="../images/Lecture09-img-1.png" alt="img-1" style="zoom:50%;" />
+  <img src="../images/Lecture09-img-1.png" alt="img-1" style="zoom: 33%;" />
 
-  <img src="../images/Lecture09-img-2.png" alt="img-2" style="zoom:50%;" />
+  <img src="../images/Lecture09-img-2.png" alt="img-2" style="zoom: 33%;" />
 
 - **Tile-able Texture**
 
-  <img src="../images/Lecture09-img-3.png" alt="img-3" style="zoom:50%;" />
+  <img src="../images/Lecture09-img-3.png" alt="img-3" style="zoom: 33%;" />
 
 
 
@@ -41,7 +41,7 @@ Assume the origin $O$. Inside the plane where a triangle $ABC$ resides, for any 
 
 - **Geometric Viewpoint**: Proportional Areas
 
-  ![img-4](../images/Lecture09-img-4.png)
+  <img src="../images/Lecture09-img-4.png" alt="img-4" style="zoom: 33%;" />
 
   Then: 
 
@@ -87,7 +87,7 @@ For each rasterized screen sample, determine its $(u, v)$ coordinate by (possibl
 
 ### Texture Magnification
 
-![img-5](../images/Lecture09-img-5.png)
+<img src="../images/Lecture09-img-5.png" alt="img-5" style="zoom:50%;" />
 
 - **Texel**: A pixel on a texture.
 
@@ -119,7 +119,7 @@ For each rasterized screen sample, determine its $(u, v)$ coordinate by (possibl
     L = \max\left(\sqrt{\left(\frac{du}{dx}\right)^2 + \left(\frac{dv}{dx}\right)^2}, \sqrt{\left(\frac{du}{dy}\right)^2 + \left(\frac{dv}{dy}\right)^2} \right)
     $$
 
-    ![img-6](../images/Lecture09-img-6.png)
+    <img src="../images/Lecture09-img-6.png" alt="img-6" style="zoom:50%;" />
 
   - Visualization: $D$ rounded to nearest integer level:
 
@@ -256,11 +256,11 @@ Applications:
 
   - ***Visible Sample:***
 
-    ![img-7](../images/Lecture12-img-7.png)
+    <img src="../images/Lecture12-img-7.png" alt="img-7" style="zoom:33%;" />
 
   - ***Invisible Sample***:
 
-    ![img-8](../images/Lecture12-img-8.png)
+    <img src="../images/Lecture12-img-8.png" alt="img-8" style="zoom:33%;" />
 
 
 
