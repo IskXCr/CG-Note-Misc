@@ -10,7 +10,7 @@ The corresponding English version can be found at [Course Website - CS180/CS280 
 
 ## About This Repository
 
-This repository contains my notes, assignments and projects for GAMES101 conducted by Prof. Lingqi Yan. 
+This repository contains my notes for GAMES101 conducted by Prof. Lingqi Yan. 
 
 The purpose of this repository is to track personal progress.
 

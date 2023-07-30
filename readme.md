@@ -2,7 +2,7 @@
 
 Author: [IskXCr - GitHub](https://github.com/IskXCr)
 
-View notes online at [IskXCr - CG-Note-Misc](https://iskxcr.github.io/CG-Note-Misc/)
+View notes online at [IskXCr - CG-Note-Misc](https://iskxcr.github.io/CG-Note-Misc/).
 
 ## Related-Links
 

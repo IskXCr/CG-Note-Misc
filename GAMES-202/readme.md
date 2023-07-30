@@ -41,10 +41,9 @@ Online reading experience currently relies on the HTML preview service provided 
 Only when the entire note has been completed will the readable-html be available.
 
 Select a html file from here and preview it in [HTML Preview](https://htmlpreview.github.io).
+### Online Notes (Based on GitHub Pages)
 
-### Online Notes (Based on HTML Preview)
-
-*Currently there is none.*
+[Lecture01 - Overview - Real-Time High Quality Rendering](./readable-html/Lecture01.html)
 
 ### How do I read notes using local tools?
 
