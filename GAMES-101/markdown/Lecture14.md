@@ -333,6 +333,11 @@ $$
 
 
 
+- Why dividing by $\cos \theta$?
+  - To recover the true radiance from that angle (regardless of $\theta$ which considers how much energy is actually received)
+
+
+
 #### Incident Radiance
 
 **Incident radiance** is the irradiance per unit solid angle arriving at the surface. 
