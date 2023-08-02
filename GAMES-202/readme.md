@@ -44,9 +44,13 @@ Select a html file from here and preview it in [HTML Preview](https://htmlprevie
 ### Online Notes (Based on GitHub Pages)
 
 [Lecture01 - Overview - Real-Time High Quality Rendering](./readable-html/Lecture01.html)
+
 [Lecture02 - Overview - Recap of CG Basics](./readable-html/Lecture02.html)
+
 [Lecture03 - Overview - Real-Time Shadows](./readable-html/Lecture03.html)
+
 [Lecture04 - Overview - Real-Time Shadows](./readable-html/Lecture04.html)
+
 
 ### How do I read notes using local tools?
 
