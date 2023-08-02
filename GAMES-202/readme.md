@@ -45,11 +45,11 @@ Select a html file from here and preview it in [HTML Preview](https://htmlprevie
 
 [Lecture01 - Overview - Real-Time High Quality Rendering](./readable-html/Lecture01.html)
 
-[Lecture02 - Overview - Recap of CG Basics](./readable-html/Lecture02.html)
+[Lecture02 - Recap of CG Basics](./readable-html/Lecture02.html)
 
-[Lecture03 - Overview - Real-Time Shadows](./readable-html/Lecture03.html)
+[Lecture03 - Real-Time Shadows 1](./readable-html/Lecture03.html)
 
-[Lecture04 - Overview - Real-Time Shadows](./readable-html/Lecture04.html)
+[Lecture04 - Real-Time Shadows 2](./readable-html/Lecture04.html)
 
 
 ### How do I read notes using local tools?
