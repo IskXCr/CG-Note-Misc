@@ -263,8 +263,6 @@ Approximating a distribution more **accurately**.
 
 - We may restore a CDF given the **moment-generating function**:
 
-  - 
-
   - The moment-generating function (**MGF**) of a random variable $X$ is $M(t) = E(e^{tX})$ if the expectation is defined.
 
   - Properties of MGF:
