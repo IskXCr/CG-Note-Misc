@@ -34,7 +34,7 @@ Shadow Mapping is:
 
 - Pass 1
   - Output a "depth texture" from the light source
-    - For each fragment on that depth texture, record the minimum depth seen by the light source
+    - For each fragment on that depth texture, record the minimum depth seen from the light source
 - Pass 2
   - Pass **2A**: Render a standard image from the eye
   - Pass **2B**: Project visible points in eye view back to light source. Test the depth.
@@ -46,7 +46,7 @@ Shadow Mapping is:
 | <img src="../images/Lecture03-img-5.png" alt="image-20230728163359092" style="zoom: 50%;" /> | <img src="../images/Lecture03-img-6.png" alt="image-20230728163419528" style="zoom: 50%;" /> |
 
 - Depth View - Viewed from light source
-  - In this figure: the darker, the closer the object is to the light source
+  - In this figure: the darker the fragment is, the closer the corresponding point on that object is to the light source
 
 - Eye's View - Viewed from camera, projecting the depth map onto the eye's view.
 
@@ -75,7 +75,7 @@ The definitions of $z$ value used in shadow mapping and in depth-test must be co
 
 - **Resolution and floating-point precision count**. Notice the red slashes on the right figure.
   - Each pixel covers an area of the surface, in which **the depth is constant** (because it is within a single fragment).
-    - The actual depth differs from what's inside the shadow mapping
+    - The actual depth differs from that recorded in the shadow mapping
   - The effect is most severe at **grazing angle**. 
   - The effect is mitigated when the plane used for shadow mapping is parallel to the surface being illuminated.
 - The bias is too low, so self-shadowing occurs. Notice the weird pattern on the ground - they are produced because *triangles (that are used to model the ground) shadow themselves*.
@@ -84,30 +84,33 @@ The definitions of $z$ value used in shadow mapping and in depth-test must be co
 
 ##### Adding a (variable) bias to reduce self occlusion
 
-Now the shadow occurs **only if** the difference exceeds certain threshold.
+Now the shadow occurs **only if** the difference exceeds certain threshold:
+$$
+\Delta d \geq \text{Threshold}
+$$
 
-- May be related to the viewing angle. If perpendicular to the surface, then little bias. Else, high bias.
+- May be related to viewing angle. If perpendicular to the surface, then little bias. Else, high bias.
 
 <img src="../images/Lecture03-img-8.png" alt="image-20230728164740245" style="zoom:50%;" />
 
-- **A high bias**: Introducing detached shadow.
-  - When the object is indeed small, causing the depth difference to be lied within the bias interval.
+- **Bias is too high**: Introducing detached shadow.
+  - Small object causes the difference between depths to be lied within the bias interval.
     - Notice the detached shadow on Laura's shoes.
 
 
 
 ##### Second-Depth Shadow Mapping
 
-Store the second-minimum depth when generating shadow mapping.
+Store the second-minimum depth when generating the shadow map.
 
-- Using the midpoint between first and second depths in SM.
+- Using the midpoint between first and second depths in the SM.
 
 <img src="../images/Lecture03-img-9.png" alt="image-20230728165033670" style="zoom:50%;" />
 
 *Assume the light source is directly above.*
 
 - Requires objects to be **watertight**:
-  - Cannot describe planes without volume.
+  - Cannot describe planes without volume. (Can be solved with some tricks)
 - The **overhead** may not worth it:
   - RTR does not trust in **complexity**: The actual time may be doubled or tripled or even more.
 
@@ -117,7 +120,7 @@ Store the second-minimum depth when generating shadow mapping.
 
 <img src="../images/Lecture03-img-10.png" alt="image-20230728165118670" style="zoom: 67%;" />
 
-- **The resolution still counts**: The area covered by a single fragment inside the shadow maps has a **constant depth**.
+- **The resolution still counts**: The area covered by a single fragment inside the shadow maps has a **constant depth**. Solution: change the resolution of shadow maps:
   - Shadow Maps with Dynamic Resolution
   - Cascaded Shadow Maps
   - Convolutional Shadow Maps
@@ -126,7 +129,7 @@ Store the second-minimum depth when generating shadow mapping.
 
 ## II. The Math behind Shadow Mapping
 
-### Approximate the Rendering Equation
+### Approximating the Rendering Equation
 
 In real-time rendering, we care about fast and accurate **approximation**. (Approximately equal)
 
@@ -162,7 +165,7 @@ L_e (\text{p}, \omega_o) +
 
 \end{equation}
 $$
-can be approximated as
+can be approximated as, if not considering term regarding to self-emittance,
 $$
 L_o(\text{p}, \omega_o)
 \approx
@@ -173,7 +176,7 @@ L_o(\text{p}, \omega_o)
 }
 \cdot
 \underbrace{\int_{\Omega+} L_i (\text{p}, \omega_i) f_r(\text{p}, \omega_i, \omega_o) \cos \theta_i \dd{\omega_i}}
-_{\text{Do shading directly without considering visibility}}
+_{\text{Do shading directly without considering visibility}}
 $$
 
 - **Separate visibility from the integration**. The right part now remains only the direct shading.
@@ -193,16 +196,20 @@ Will be reviewed again when discussing Ambient Occlusions.
 <img src="../images/Lecture03-img-11.png" alt="image-20230728180618799" style="zoom:50%;" />
 
 - Upper: Point Light, **umbra** only
+  - Inside the umbra of a light source, the viewer cannot see that light source.
+
 - Lower: Area Light, with **penumbra**
+  - Inside the penumbra of a light source, the viewer can see only part of that light source.
+
 
 
 
 ### Percentage Closer Filtering
 
 - Provides **anti-aliasing** at shadows' edges
-  - **Not** for soft shadows (PCSS, which is for soft shadows, will be introduced later)
+  - **Not for soft shadows** (PCSS, which is for soft shadows, will be introduced later)
   - **Filtering the results of shadow comparisons**
-    - In fact averaging the results
+    - Averaging the results of shadow comparisons
 - Why not filter the shadow map?
   - Texture filtering just averages color components:
     - You'll get **blurred** shadow map first
@@ -210,20 +217,23 @@ Will be reviewed again when discussing Ambient Occlusions.
 
 
 
-#### Solution
+#### The Algorithm
 
 Compute the **visibility term** in the rendering equation:
 
-- Instead of performing a single query, perform multiple (e.g., $7 \times 7$) depth comparisons for each **fragment**:
-  - **Method**: In the shadow map (figure below), query the **neighboring region** of point $P$ on the shadow map
-  - **Querying the fragment**: the farther the blurrier
+1. Instead of performing a single query, perform multiple (e.g., $7 \times 7$) depth comparisons for each **fragment**:
 
-- Then, averages the **results of** comparisons
-- For example:
-  - For point $P$ on the floor,
-    1. Compare its depth $D$ with all texels in the red box, e.g., $3 \times 3$.
-    2. Get the compared results, e.g., $\begin{bmatrix} 1 & 0 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{bmatrix}$
-    3. Take the average to get visibility, e.g., $0.667$
+   - **Method**: In the shadow map (figure below), query the **neighboring region** of point $P$ on the shadow map
+
+   - **Querying the fragment**: the farther the fragment is to the light source, the blurrier its corresponding shadow will be.
+
+2. Then, averages the **results of** comparisons.
+
+For example:
+- For point $P$ on the floor,
+  1. Compare its depth $D$ with all texels in the red box, e.g., $3 \times 3$.
+  2. Get the compared results, e.g., $\begin{bmatrix} 1 & 0 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{bmatrix}$
+  3. Take the average to get visibility, e.g., $0.667$
 
 <img src="../images/Lecture03-img-12.png" alt="image-20230728181322513" style="zoom: 50%;" />
 
@@ -240,12 +250,12 @@ Compute the **visibility term** in the rendering equation:
   - Larger -> Softer
 
 - Can we use PCF to achieve soft shadow effects?
-  - Using a larger filter size leads to visual approximation of soft shadows
+  - Using a larger filter size leads to visual **approximation** of soft shadows
 - **Key thoughts**:
   - From hard shadows to soft shadows
   - What's the **correct size** to filter?
-  - Is it uniform?
-    - No. The closer the object is to the surface the shadow is projected to, the sharper the shadow is.
+  - Is the produced shadow uniform?
+    - No. The closer the object is to the projecting surface, the sharper the projected shadow will be.
 
 
 
@@ -253,13 +263,16 @@ Compute the **visibility term** in the rendering equation:
 
 <img src="../images/Lecture03-img-15.png" alt="image-20230728182327005" style="zoom:50%;" />
 
-- The shadow is sharper as the tip gets closer to the plane. Softer in the other direction.
+- The shadow becomes sharper as the tip gets closer to the plane. Softer in the other direction.
 
 <img src="../images/Lecture03-img-14.png" alt="image-20230728182053622" style="zoom:33%;" />
 
 - $ \text{Filter Size} \leftrightarrow \text{Blocker Distance}$
 
-  - More accurately, **relative average** projected blocker depth.
+  - Blocker distance: Averaged *projected* blocker depth.
+    - **Average** samples of depth in an area
+    - **Projected** so as to get the perpendicular distance
+
 
   $$
   w_{\text{Penumbra}} = (d_{\text{Receiver}} - d_{\text{Blocker}}) \cdot w_{\text{Light}} / d_{\text{Blocker}}
@@ -269,8 +282,8 @@ Compute the **visibility term** in the rendering equation:
   - Shadow map cannot be produced with an **area light**.
   - The soft shadow created by the area light, is simulated by:
     1. First using a point light to generate the shadow map, 
-    2. Then specify the dimension of that light when doing calculation.
-- The ratio here corresponds to the term **percentage**
+    2. Then specify the dimension of that light when doing calculation, i.e. **post-processing**
+- The ratio in the formula corresponds to word *percentage* in its name
 
 
 
@@ -289,13 +302,13 @@ Compute the **visibility term** in the rendering equation:
 
 - Which region to perform blocker search? What **size**?
 
-  - Can be set constant (e.g., $5 \times 5$), but can be better with heuristics
+  - Can be set constant (e.g., $5 \times 5$), but can be **better with heuristics**
 
   - Depends on the size of light, and distance between receiver and the light:
   
     <img src="../images/Lecture03-img-16.png" alt="image-20230731172224524"  />
   
-    When estimating the blocker depth, create a cone as the figure shows, and use the area covered by the cone.
+    When estimating the blocker depth, create a cone as the figure shows, and use the projected area on the shadow map covered by the cone.
 
 <img src="../images/Lecture03-img-18.png" alt="image-20230731172655220" />
 

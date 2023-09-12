@@ -10,16 +10,16 @@
 
 - **Consider the Neighboring Region**: For any point $x$ being rendered, we consider the neighboring region of the corresponding texel $p$ on the shadow map.
 
-  - **Weighted Consideration**: When we average the entire region with all weights set to $1$, then it is the traditional PCF/PCSS. We may also assign more weight to texels closer to $p$, thus forming a **weight distribution**.
+  - **Weighted Consideration**: When we average the entire region with all weights set to $1$, then it is the traditional PCF/PCSS. We may also assign higher weights to texels closer to $p$, resulting in a weighted consideration.
 
-  - **Filter/Convolution**: Averaging w.r.t. to a specific distribution is essentially filter/convolution.
+  - **Filter/Convolution**: Averaging w.r.t. to a specific distribution is essentially filtering/convolution.
     $$
     [w \ast f](p) = \sum_{q \in \mathcal{N}(p)} w(p, q) f(q)
     $$
   
-    where:
+    represents the filtering done on fragment $p$, and:
   
-    - $w(p, q)$ represents weight when considering texel $q$ in terms of $p$, or **the distribution**, 
+    - $w(p, q)$ represents relative weight when considering texel $q$ in terms of $p$, or **the distribution**, 
     - $\mathcal{N}(p)$ represents the neighboring region of point $p$,
     - $f(x)$ is the function the convolution is done on, and
     - $[w \ast f]$ is the result of convolution.
@@ -36,7 +36,12 @@ For any shading point $x$ which have its corresponding texel $p$ on the shadow m
 
 - For any texel $q$ inside $\mathcal{N}(p)$, we consider whether $x$ will be blocked by $q$.
 - $V(x)$: the visibility of point $x$
+- $D(x)$: the visibility of point (or texel) $x$
 - $\chi^+$: the sign function. If $t > 0$, then $\chi^+(t) = 1$. Else, $\chi^+(t) = 0$.
+
+**Explanation**:
+
+- If depth of the current texel $q$ is greater than that of point $x$, then apparently $q$ does not block $x$ from the light source. Since we are computing the visibility, we use $\chi^+$ to formularize the condition.
 
 
 
@@ -47,14 +52,14 @@ Thus, we have the following conclusions:
   V(x) \neq \chi^+ \{[w \ast D_\text{SM}](q) - D_\text{Scene}(x)\}
   $$
 
-  - Which still leads to binary visibilities
+  - The RHS still leads to binary visibilities.
 
 - **PCF is not filtering the resulting image with binary visibilities**:
   $$
   V(x) \neq \sum_{y \in \mathcal{N}(x)} w(x, y)V(y)
   $$
 
-  - In other words, PCF is not filtering the resultant shadow.
+  - In other words, PCF is not filtering the resultant shadow, as the RHS does.
 
 
 
@@ -73,9 +78,9 @@ Given the PCSS algorithm:
 **Which steps can be slow in PCSS?**
 
 - Examining every texel in a certain region (steps 1 and 3)
-  - **Sample**:
+  - **Sample solutions**:
     - May use sparse sampling, and then apply image-space denoising.
-    - Introducing noise.
+      - Introducing noise.
 
   - **MIPMAP**
 
@@ -102,9 +107,11 @@ Predict the percentage of texels that are **in front of** the shading point:
 
 #### Key Idea
 
-Using probability theories to approximate the answer.
+Using probability theories to approximate the answer. To apply these theories, we need to know key features of the target distribution.
 
-- Quickly compute the mean and variance of depths in an area
+- Quickly compute the **mean** and **variance** of depths in an area
+
+  - How? See next chapter.
 
 - **Mean** (Average):
 
@@ -116,9 +123,9 @@ Using probability theories to approximate the answer.
   $$
   \text{Var}(X) = E(X^2) - E^2(X)
   $$
-  
+
   - **Quick Computation**: Use depth squared.
-  
+
   - Generate a **square-depth map** along with the shadow map.
     - Utilize multiple channels of a texture map
 
@@ -138,7 +145,7 @@ P(x > t) \leq \frac{\sigma^2}{\sigma^2 + (t - \mu)^2}
 $$
 where $\sigma^2$ is variance and $\mu$ is mean, regardless of the actual distribution.
 
-- Hence we acquire the **percentage of texels that has a greater depth**.
+- Hence we acquire the **percentage of texels that has a depth larger than given threshold**.
 
 
 
@@ -160,14 +167,14 @@ where $\sigma^2$ is variance and $\mu$ is mean, regardless of the actual distrib
 
 ![image-20230801195842740](../images/Lecture04-img-2.png)
 
-- Blocker ($z < t$), average $z_\text{occ}$, the depth of occluding objects
-- Non-blocker ($z > t$), avg. $z_\text{unocc}$
+- Blocker ($z < t$), average $z_\text{occ}$, representing the average depth of occluding objects
+- Non-blocker ($z > t$), avg. $z_\text{unocc}$, representing the average depth of objects that does not occlude the target
 
 $$
 \frac{N_1}{N}z_\text{unocc} + \frac{N_2}{N}z_\text{occ} = z_\text{avg}
 $$
 
-- How to compute? **Approximations**:
+- How to compute? We have such **rough approximations**:
   - $N_1 / N \approx P(x > t)$ by **Chebyshev's inequality**.
   - $N_2 / N \approx 1 - P(x > t)$
   - $z_\text{unocc} = t$
@@ -183,7 +190,7 @@ $$
 
 ### Issues
 
-- **Approximation failure** leads to significant artifacts.
+- Approximation failure leads to significant artifacts.
 
 
 
@@ -227,7 +234,7 @@ Essentially doing prefix sum.
   ![image-20230801203057974](../images/Lecture04-img-6.png)
 
   - Overly dark: May be acceptable
-  - Overly bright: Light **leaking**/**bleeding (industrial term)**
+  - Overly bright: Light **leaking**/**bleeding** (the latter is a industrial term)
 
 
 
