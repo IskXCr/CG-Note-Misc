@@ -51,6 +51,14 @@ Select a html file from here and preview it in [HTML Preview](https://htmlprevie
 
 [Lecture04 - Real-Time Shadows 2](./readable-html/Lecture04.html)
 
+[Lecture05 - Real-Time Environment Mapping](./readable-html/Lecture05.html)
+
+[Lecture06 - Real-Time Environment Mapping (Precomputed Radiance Transfer)](./readable-html/Lecture06.html)
+
+[Lecture07 - Real-Time Global Illumination (in 3D)](./readable-html/Lecture07.html)
+
+[Lecture08 - Real-Time Global Illumination (Screen Space)](./readable-html/Lecture08.html)
+
 
 ### How do I read notes using local tools?
 

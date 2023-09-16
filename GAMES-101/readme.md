@@ -36,29 +36,29 @@ Online reading experience currently relies on the GitHub Pages service. Below yo
 
 [Lecture04 - Transformation Cont.](./readable-html/Lecture04.html)
 
-[Lecture05 - Rasterization 1](./readable-html/Lecture05.html)
+[Lecture05 - Rasterization 1 (Triangles)](./readable-html/Lecture05.html)
 
-[Lecture06 - Rasterization 2](./readable-html/Lecture06.html)
+[Lecture06 - Rasterization 2 (Anti-aliasing and Z-Buffering)](./readable-html/Lecture06.html)
 
-[Lecture07 - Shading 1](./readable-html/Lecture07.html)
+[Lecture07 - Shading 1 (Illumination, Shading and Graphics Pipeline)](./readable-html/Lecture07.html)
 
-[Lecture08 - Shading 2](./readable-html/Lecture08.html)
+[Lecture08 - Shading 2 (Shading, Pipeline and Texture Mapping)](./readable-html/Lecture08.html)
 
-[Lecture09 - Shading 3](./readable-html/Lecture09.html)
+[Lecture09 - Shading 3 (Texture Mapping and Shadow Mapping)](./readable-html/Lecture09.html)
 
-[Lecture10 - Geometry 1](./readable-html/Lecture10.html)
+[Lecture10 - Geometry 1 (Introduction)](./readable-html/Lecture10.html)
 
-[Lecture11 - Geometry 2](./readable-html/Lecture11.html)
+[Lecture11 - Geometry 2 (Curves and Surfaces)](./readable-html/Lecture11.html)
 
-[Lecture12 - Geometry 3](./readable-html/Lecture12.html)
+[Lecture12 - Geometry 3 (Mesh Operations and Shadow Mapping)](./readable-html/Lecture12.html)
 
-[Lecture13 - Ray Tracing 1](./readable-html/Lecture13.html)
+[Lecture13 - Ray Tracing 1 (Whitted-Style Ray Tracing)](./readable-html/Lecture13.html)
 
-[Lecture14 - Ray Tracing 2](./readable-html/Lecture14.html)
+[Lecture14 - Ray Tracing 2 (Acceleration and Radiometry)](./readable-html/Lecture14.html)
 
-[Lecture15 - Ray Tracing 3](./readable-html/Lecture15.html)
+[Lecture15 - Ray Tracing 3 (Light Transport and Global Illumination)](./readable-html/Lecture15.html)
 
-[Lecture16 - Ray Tracing 4](./readable-html/Lecture16.html)
+[Lecture16 - Ray Tracing 4 (Monte Carlo Path Tracing)](./readable-html/Lecture16.html)
 
 [Lecture17 - Materials and Appearances](./readable-html/Lecture17.html)
 

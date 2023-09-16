@@ -1,4 +1,4 @@
-# GAMES101 Lecture 12 - Geometry 3
+# GAMES101 Lecture 12 - Geometry 3 (Mesh Operations and Shadow Mapping)
 
 [GAMES101_Lecture_12.pdf](https://sites.cs.ucsb.edu/~lingqi/teaching/resources/GAMES101_Lecture_12.pdf)
 
