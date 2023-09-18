@@ -28,6 +28,8 @@ People seek simple and fast solution to **one-bounce indirect illumination** in 
 
 ### Reflective Shadow Maps (RSM)
 
+Original paper: [rsm.pdf (klayge.org)](http://www.klayge.org/material/3_12/GI/rsm.pdf)
+
 #### Key Observations & Assumptions
 
 What are needed to illuminate any point $p$ with one-bounce indirect illumination?
@@ -70,14 +72,15 @@ For a diffuse reflective patch, we have
 - $L_i = f_r \cdot \frac{\Phi}{\dd{A}}$, where $\Phi$ is the incident flux
 
 
+
+The irradiance at a surface point $p$ with normal $n$ due to pixel light $q$ is thus
+
 $$
-\begin{equation} \tag{Contribution from point $q$ with normal $n$}
-E_p (q, n) = \Phi_p \frac{\max\{0, \cos \theta_p\} \max\{0, \cos \theta_q\}}{\norm{q - p} ^2}
+\begin{equation} \tag{Irradiance contribution at point $p$ from light $q$}
+E_q (p) = \Phi_q \frac{\max\{0, \cos \theta_p\} \max\{0, \cos \theta_q\}}{\norm{p - q} ^4}
 \end{equation}
 $$
-where: TODO
-
-
+Storing radiant flux $\Phi_q$ instead of radiosity or radiance is intentional. By this, we don't have to care about the representative area of the light, which makes the generation and the evaluation simpler.
 
 
 
@@ -133,6 +136,8 @@ What is needed to record in an RSM?
 
 
 
-### Light Propagation Volumes (LPV)
+### Light Propagation Volumes (LPV) & Voxel Global Illumination (VXGI)
 
-*Not mentioned in this lecture*.
+Please refer to `Lecture08.md`.
+
+![image-20230917004201552](../images/Lecture07-img-8.png)

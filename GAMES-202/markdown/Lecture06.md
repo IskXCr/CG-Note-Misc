@@ -65,13 +65,12 @@ Spherical Harmonics, abbreviated in the following context as SH, are a set of 2D
 
 ![image-20230914145128774](../images/Lecture06-img-4.png)
 
-Each SH basis function $B_i(\omega)$ is associated with a **Legendre** polynomial.
+Each SH basis function $B_i(\omega)$ is associated with a **Legendre polynomial**.
 
 - **Projection on** $B_i(\omega)$: Obtain the coefficient of each component. Similar as projection in a vector space.
   $$
   c_i = \int_{\Omega} f(\omega) B_i(\omega) \dd{\omega}
   $$
-  
   
 - **Reconstruction from coefficients**: Restore the original function using (possibly *truncated*) coefficients and basis functions.
 
